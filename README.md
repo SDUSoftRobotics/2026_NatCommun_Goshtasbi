@@ -1,7 +1,6 @@
 This repository contains the MATLAB code, experimental datasets, and simulation resources accompanying the article:
 
-“Tactile Perception through Fluid–Solid Interaction”
-_(Nature Communications, 2026)_
+Goshtasbi A., Berghuis M., Parvaresh A., Murali Babu S. P., Style R.W., Rafsanjani A., Tactile Perception through Fluid–Solid Interaction, _Nature Communications_ (2026).
 
 
 # **Raw Data Processing**

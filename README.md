@@ -34,9 +34,9 @@ The provided MATLAB scripts:
 1. Add the folder to MATLAB path:
    ```matlab
    addpath(genpath('Raw_Data_Processing'));
-2. Load an example dataset:
+2. Load an example dataset loaded in preliminary or underewater folder:
    ```matlab
-   data = readmatrix('example_dataset.xlsx');
+   data = readmatrix('example_dataset.mat');
 3. Run the processing script
    ```matlab
    process_raw_data
@@ -75,12 +75,33 @@ Example datasets are provided in this folder and correspond to those used in the
    addpath(genpath('Learning'));
    run('main_training_script.m')   % replace with your script name
 
-
 Then:
 - Select 1D or 2D sensor
 - Choose one of the provided .xlsx dataset
 - Enter the number of clusters when prompt
 
+**Output**
+- Trained FSI models (.mat and  .fis files)
+- Regression plots for each predicited variable
+- Test RMSE displayed in MATLAB console
 
-# **Machine Learning**
+**Model details**
+- Clustering: Fuzzy C-Means (via _genfis_)
+- FIS type: Sugeno
+- Training: ANFIS (hybrid optimization)
+- Trian/test split: 80%/20% (randomized)
+- Separated models are trained for each output (X, Y, F)
+
+
+**Notes**
+- Input structure:
+  - 1D: PL, PR
+  - 2D: PL, PR, TL, TR
+- Output structure:
+  - 1D: X, F
+  - 2D: X, Y, F
+- Results depend o the chosen number of clusters (please refer to the paper for better understanding the trade-off)
+- Ensure dataset format matches the expected column structure
+
+# **MATLAB–Python TCP**
 

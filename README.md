@@ -44,8 +44,15 @@ The provided MATLAB scripts:
   
 # **Machine Learning**
 
-The Learning folder contains MATLAB code for fuzzy clustering, used to train and analyze the dataset.
-Example data includes:
+The Machine Learning folder contains MATLAB code used to map sensor signals to position and force using a combination of Fuzzy C-Means (FCM) clustering and Adaptive Neuro-Fuzzy Inference System (ANFIS).
+A detailed description of the model is provided in Supplementary Information S11 of the paper.
+
+The MATLAB script: 
+- Learns the relationship between pressure values (input) and force and position (outputs)
+- Predicts:
+   - Position (X, X-Y, or Hilbert index)
+   - Force (F)
+- Supports both 1D and 2D sensor
 
 - 1D sensor all data
 

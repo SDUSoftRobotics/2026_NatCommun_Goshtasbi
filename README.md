@@ -6,7 +6,7 @@ This repository contains the MATLAB code and experimental data accompanying the 
 The Raw Data Processing folder includes MATLAB scripts used to process the experimental data, converting collected signals into pressure and force measurements.
 Example datasets are provided for:
 
-- 1D sensor diameter of 1.5mm for all 3 media
+- 1D sensor diameter of 1.5 mm for all 3 media
 
 - 2D sensor
 

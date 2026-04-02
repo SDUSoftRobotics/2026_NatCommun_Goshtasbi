@@ -41,7 +41,6 @@ The provided MATLAB scripts:
    ```matlab
    process_raw_data
 
-  
 # **Machine Learning**
 
 The Machine Learning folder contains MATLAB code used to map sensor signals to position and force using a combination of Fuzzy C-Means (FCM) clustering and Adaptive Neuro-Fuzzy Inference System (ANFIS).
@@ -54,18 +53,34 @@ The MATLAB script:
    - Force (F)
 - Supports both 1D and 2D sensor
 
-- 1D sensor all data
 
-- 2D 60×60 sensor
+**Workflow**
+1. Select sensor type (1D or 2D)
+2. Select dataset (provided in this folder)
+3. Define the number of clusters (FCM)
+4. Train FIS model using ANFIS
+5. Evaluate model performance (regression + RMSE)
+6. Save trained models
 
-These datasets correspond to those used in the paper.
+**Included data**
 
-**MATLAB-Python TCP**
+Example datasets are provided in this folder and correspond to those used in the paper:
+- 1D sensor (all data)
+- 2D sensor (60×60 sample)
 
-This folder includes MATLAB and Python code for establishing a TCP/IP connection between MATLAB and Python.
-It is used to connect the trained ANFIS model in MATLAB with Python to interface and control the UR robot during the HRI demonstrations.
+**How to run**
+      
+3. Run the processing script
+   ```matlab
+   addpath(genpath('Learning'));
+   run('main_training_script.m')   % replace with your script name
 
-**FSI COMSOL Simulation** 
 
-This section contains files and instructions related to the Fluid–Solid Interaction (FSI) simulation performed in COMSOL Multiphysics.
-A detailed description and simulation data can be found at the following [link](https://github.com/mwberghuis/softsensor?tab=readme-ov-file)
+Then:
+- Select 1D or 2D sensor
+- Choose one of the provided .xlsx dataset
+- Enter the number of clusters when prompt
+
+
+# **Machine Learning**
+

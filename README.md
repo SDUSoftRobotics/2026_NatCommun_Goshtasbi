@@ -103,5 +103,18 @@ Then:
 - Results depend o the chosen number of clusters (please refer to the paper for better understanding the trade-off)
 - Ensure dataset format matches the expected column structure
 
-# **MATLAB–Python TCP**
+# **MATLAB–Python Transmission Control Protocol (TCP)**
 
+This folder enables real-time sensing and robot control by establishing a TCP/IP connection between MATLAB and Python.
+It integrates:
+- MATLAB → signal processing + ANFIS prediction
+- Python → robot control (UR robot via RTDE)
+
+**Goal**
+- Perform real-time tactile inference from sensor data
+- Send predicted position (X) and force (F → Z motion) from MATLAB to Python
+- Control a UR robot for human–robot interaction (HRI) experiments
+
+**Overview**
+1. MATLAB
+   -

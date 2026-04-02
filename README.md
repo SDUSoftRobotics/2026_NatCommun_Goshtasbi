@@ -29,7 +29,21 @@ The provided MATLAB scripts:
 
 - Underwater 1D sensor
 
-**Machine Learning**
+**How to use**
+
+1. Add the folder to MATLAB path:
+   ```matlab
+   addpath(genpath('Raw_Data_Processing'));
+2. Load an example dataset:
+   ```matlab
+   data = readmatrix('example_dataset.xlsx');
+3. Run the processing script
+   ```matlab
+   process_raw_data
+
+
+  
+# **Machine Learning**
 
 The Learning folder contains MATLAB code for fuzzy clustering, used to train and analyze the dataset.
 Example data includes:

@@ -7,7 +7,7 @@
 %
 % Position and Force training and results of the tactile sensor using FCM.
 % The full explanation on the model can be found in supplementary
-% information S7. 
+% information S11. 
 clc;
 clear;
 close all;

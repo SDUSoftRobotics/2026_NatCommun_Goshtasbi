@@ -21,11 +21,11 @@ The provided MATLAB scripts:
 3. Extract from experimental data
    - Maximum force (used as label)
 
-Example datasets are provided for:
+**Example datasets are provided for:**
 
-- 1D sensor diameter of 1.5 mm for all 3 media
+- 1D preliminary results for all 3 media
 
-- 2D sensor
+- 2D preliminary results for oil-filled sensor
 
 - Underwater 1D sensor
 

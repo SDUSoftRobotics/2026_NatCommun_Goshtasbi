@@ -116,5 +116,52 @@ It integrates:
 - Control a UR robot for human–robot interaction (HRI) experiments
 
 **Overview**
-1. MATLAB
-   -adfonadfnsdlofnsao
+1. MATLAB:
+   - Acquires sensor data (NI-DAQ)
+   - Detects contact events
+   - Extracts features (PL, PR)
+   - Predicts:
+     - X position
+     - Force (F)
+   - Sends data (X,Z) via TCP
+2. Python:
+   - Receives TCP data (X,Z)
+   - Converts predictions into robot motion
+   - Executes poke motion using UR RTDE interface
+  
+**How to run**
+1. Start Python server (Robot control)
+   The code:
+   - Initializes robot connection
+   - Moves robot to initial position
+   - Starts TCP server (127.0.0.1:65432)
+2. Run MATLAB script
+   The code:
+   - Loads trained ANFIS models
+   - Connects to Python via TCP
+   - Starts real-time monitoring and predicition
+
+**Requirements**
+MATLAB
+- Data Acquisition Toolbox (NI-DAQ)
+- Fuzzy Logic Toolbox
+Python
+- Socket
+- rtde_control
+- rtde_receive
+
+**Notes**
+
+- MATLAB must start after Pythonserver is running
+- TCP communications uses:
+  - IP: 127.0.0.1
+  - Port: 65432
+- Force is mapped to Z displacement with safety clamping
+- Robot motion includes: Approach → poke → return sequence
+
+
+
+# **Fluid-Solid Interaction (FSI) COMSOL Simulations**
+
+This section contains files and instructions related to the Fluid–Solid Interaction (FSI) simulation performed in COMSOL Multiphysics. A detailed description and simulation data can be found at the following [link](https://github.com/mwberghuis/softsensor)
+

@@ -1,9 +1,26 @@
-This repository contains the MATLAB code and experimental data accompanying the article:
-“Tactile Perception through Fluid–Solid Interaction.”
+This repository contains the MATLAB code, experimental datasets, and simulation resources accompanying the article:
 
-**Raw Data Processing**
+“Tactile Perception through Fluid–Solid Interaction”
+_(Nature Communications, 2026)_
 
-The Raw Data Processing folder includes MATLAB scripts used to process the experimental data, converting collected signals into pressure and force measurements.
+
+# **Raw Data Processing**
+
+The Raw Data Processing folder includes MATLAB scripts used to process raw analog sensor signals and experimental force data to generate features and labels for machine learning.
+
+The provided MATLAB scripts:
+- Process raw analog signals from the sensor
+- Extract input features from pressure signals
+- Process experimental force measurements to generate labels
+
+**Processing pipeline**
+1. Remove baseline offset from raw signals
+2. Extract from sensor signals
+   - Maximum pressure (peak value)
+   - Rise time (time to peak)
+3. Extract from experimental data
+   - Maximum force (used as label)
+
 Example datasets are provided for:
 
 - 1D sensor diameter of 1.5 mm for all 3 media
